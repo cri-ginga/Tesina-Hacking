@@ -1,0 +1,223 @@
+
+
+## 1️⃣ `index.html`
+Action: $ cat /app/tesina/separati/index.html
+Observation: <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il mondo dell'Hacking — Tesina di Cristiano Ginga</title>
+  <meta name="description" content="Tesina di 3ª superiore sul mondo dell'hacking e della cybersecurity: tipi di hacker, attacchi informatici, protezione e curiosità." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MATRIX RAIN BACKGROUND -->
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="nav" aria-label="Menu principale">
+    <div class="nav-inner">
+      <a href="#home" class="brand">~/hacking<span class="dot">_</span></a>
+      <button class="burger" id="burger" aria-label="Apri menu" aria-expanded="false">☰</button>
+      <ul id="menu">
+        <li><a class="link" href="#home">home</a></li>
+        <li><a class="link" href="#cose">cos'è</a></li>
+        <li><a class="link" href="#tipi">tipi</a></li>
+        <li><a class="link" href="#attacchi">attacchi</a></li>
+        <li><a class="link" href="#protezione">protezione</a></li>
+        <li><a class="link" href="#curiosita">curiosità</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-prompt">[ root@cybersec ~ ]$ init --tesina</div>
+        <h1>Il mondo dell'<span class="glow">Hacking</span></h1>
+        <p class="subtitle">Come funziona la cybersecurity e il mondo degli hacker — un viaggio tra tecnologia, etica e protezione digitale.</p>
+        <div class="hero-actions">
+          <a href="#cose" class="btn">Scopri di più</a>
+          <a href="#protezione" class="btn ghost">Come proteggersi</a>
+        </div>
+      </div>
+      <div class="terminal" aria-hidden="true">
+        <div class="terminal-bar">
+          <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          <span class="terminal-title">cristiano@: ~/tesina</span>
+        </div>
+        <div class="terminal-body" id="term">
+          <div class="line" id="line1"></div>
+          <div class="line" id="line2"></div>
+          <div class="line" id="line3"></div>
+          <div class="line" id="line4"></div>
+          <div class="line" id="line5"><span class="prompt">$</span> <span class="cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE 1: COS'È L'HACKING -->
+  <section id="cose">
+    <div class="container">
+      <span class="section-tag reveal">Sezione 01</span>
+      <h2 class="reveal">Cos'è l'<span>hacking</span>?</h2>
+      <div class="section-divider reveal"></div>
+      <p class="lead reveal">L'<strong style="color:#fff">hacking</strong> consiste nell'entrare o modificare sistemi informatici — computer, reti, applicazioni o dispositivi — sfruttandone vulnerabilità, errori di programmazione o configurazioni deboli. Non è di per sé un atto negativo: dipende dalle intenzioni di chi lo compie.</p>
+
+      <div class="grid-2">
+        <div class="panel reveal">
+          <h4>// Hacker etico</h4>
+          <p style="color:var(--muted)">Lavora <strong style="color:#fff">con il permesso</strong> dei proprietari dei sistemi per trovare falle di sicurezza prima che lo facciano i criminali. Aziende e governi assumono hacker etici (penetration tester) per proteggere dati, infrastrutture e utenti.</p>
+        </div>
+        <div class="panel red reveal">
+          <h4>// Criminale informatico</h4>
+          <p style="color:var(--muted)">Agisce <strong style="color:#fff">senza autorizzazione</strong>, con l'obiettivo di rubare dati, denaro, identità o di causare danni. È un reato punito dalla legge in tutto il mondo, con pene anche detentive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE 2: TIPI DI HACKER -->
+  <section id="tipi">
+    <div class="container">
+      <span class="section-tag reveal">Sezione 02</span>
+      <h2 class="reveal">I tre <span>cappelli</span> dell'hacking</h2>
+      <div class="section-divider reveal"></div>
+      <p class="lead reveal">Gli hacker vengono divisi in tre categorie, ispirate ai vecchi film western: il cappello bianco è il "buono", quello nero il "cattivo", il grigio sta nel mezzo.</p>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="ic">[+]</div>
+          <h3>White Hat <span class="tag">good</span></h3>
+          <p>Hacker etici che usano le proprie competenze per <strong style="color:#fff">difendere</strong>. Lavorano per aziende, governi o come professionisti freelance, segnalano i bug e aiutano a rendere internet più sicuro.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ic">[-]</div>
+          <h3>Black Hat <span class="tag bad">bad</span></h3>
+          <p>Criminali informatici. Violano sistemi senza permesso per <strong style="color:#fff">rubare dati</strong>, ricattare, frodare o danneggiare. Le loro azioni costituiscono reato e causano miliardi di euro di danni ogni anno.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ic">[~]</div>
+          <h3>Grey Hat <span class="tag mid">grey</span></h3>
+          <p>Stanno nel mezzo: trovano vulnerabilità <strong style="color:#fff">senza autorizzazione</strong>, ma poi le segnalano (a volte chiedendo una ricompensa). Le loro intenzioni non sono malvagie, ma il loro metodo è comunque illegale.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE 3: ATTACCHI INFORMATICI -->
+  <section id="attacchi">
+    <div class="container">
+      <span class="section-tag reveal">Sezione 03</span>
+      <h2 class="reveal">Attacchi <span>informatici</span></h2>
+      <div class="section-divider reveal"></div>
+      <p class="lead reveal">Gli attacchi più diffusi sfruttano la disattenzione degli utenti più che vere debolezze tecniche. Conoscerli è il primo passo per evitarli.</p>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="ic">@</div>
+          <h3>Phishing</h3>
+          <p>Email o messaggi che <strong style="color:#fff">imitano siti reali</strong> (banche, social, corrieri) per farti inserire password o dati della carta. Il link sembra autentico, ma porta a un sito falso controllato dai criminali.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ic">&lt;/&gt;</div>
+          <h3>Virus</h3>
+          <p>Programmi malevoli che si <strong style="color:#fff">installano di nascosto</strong> sul dispositivo: rallentano il sistema, spiano l'attività, rubano password o usano il PC per attaccarne altri (botnet).</p>
+        </article>
+        <article class="card reveal">
+          <div class="ic">$</div>
+          <h3>Ransomware</h3>
+          <p>Un tipo di virus che <strong style="color:#fff">cripta i tuoi file</strong> e chiede un riscatto (di solito in criptovaluta) per restituirteli. Ha colpito ospedali, scuole e grandi aziende in tutto il mondo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE 4: COME PROTEGGERSI -->
+  <section id="protezione">
+    <div class="container">
+      <span class="section-tag reveal">Sezione 04</span>
+      <h2 class="reveal">Come <span>proteggersi</span></h2>
+      <div class="section-divider reveal"></div>
+      <p class="lead reveal">Bastano poche abitudini per ridurre del 90% il rischio di essere vittime di un attacco. Ecco la checklist essenziale.</p>
+
+      <ul class="checklist">
+        <li class="reveal">
+          <div class="check">✓</div>
+          <div>
+            <strong>Password sicure</strong>
+            <span>Lunghe almeno 12 caratteri, con lettere, numeri e simboli. Diverse per ogni servizio, gestite con un password manager.</span>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="check">✓</div>
+          <div>
+            <strong>Antivirus aggiornato</strong>
+            <span>Mantieni attivo un buon antivirus e installa sempre gli aggiornamenti di sistema: chiudono le falle di sicurezza note.</span>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="check">✓</div>
+          <div>
+            <strong>Autenticazione a due fattori (2FA)</strong>
+            <span>Aggiunge un codice temporaneo (SMS o app) al login. Anche se rubano la password, senza il codice non possono entrare.</span>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="check">✓</div>
+          <div>
+            <strong>Attenzione ai link sospetti</strong>
+            <span>Controlla sempre il dominio prima di cliccare. Banche e social non chiedono mai password via email o SMS.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SEZIONE 5: CURIOSITÀ -->
+  <section id="curiosita">
+    <div class="container">
+      <span class="section-tag reveal">Sezione 05</span>
+      <h2 class="reveal">Curiosità: <span>Anonymous</span></h2>
+      <div class="section-divider reveal"></div>
+
+      <div class="curio">
+        <div class="mask-box reveal" aria-hidden="true">
+          <svg viewBox="0 0 200 240"  a href="img/3097218.jpg" target="_blank">a href="img/3097218.jpg" target="_blank"></a>
+            <path d="M100 18c-34 0-62 24-62 60 0 18 6 36 14 52 8 18 16 38 18 56 2 18 12 32 30 32s28-14 30-32c2-18 10-38 18-56 8-16 14-34 14-52 0-36-28-60-62-60z"/>
+            <path d="M70 95c10-6 22-6 30 0M100 95c8-6 20-6 30 0"/>
+            <path d="M62 130c8 6 22 8 38 8s30-2 38-8"/>
+            <path d="M100 110v22"/>
+            <path d="M86 150c4 6 10 8 14 8s10-2 14-8"/>
+            <path d="M100 165v40"/>
+            <path d="M88 178c4 4 8 6 12 6s8-2 12-6"/>
+            <path d="M80 195c6 6 12 8 20 8s14-2 20-8"/>
+          </svg>
+        </div>
+        <div class="reveal">
+          <p style="color:var(--muted); margin-bottom: 16px;"><strong style="color:#fff; font-family: var(--font-mono);">Anonymous</strong> è un collettivo di hacker e attivisti nato sul forum 4chan intorno al 2003. Non ha leader né struttura: chiunque condivida le sue idee può unirsi. Ha condotto operazioni contro governi, multinazionali e organizzazioni accusate di censura, corruzione o violazione dei diritti umani.</p>
+          <p style="color:var(--muted);">Il loro simbolo è la <strong style="color:#fff">maschera di Guy Fawkes</strong>, ispirata al film <em>"V per Vendetta"</em> (2006). Guy Fawkes fu un cospiratore inglese che nel 1605 tentò di far saltare in aria il Parlamento di Londra: la maschera è diventata icona globale di ribellione contro l'autorità.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p class="quote">L'hacking può essere usato sia per aiutare che per danneggiare. Per questo la cybersecurity oggi è fondamentale.</p>
+      <div class="author">Tesina di Cristiano Ginga </div>
+      <p class="meta"> <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
